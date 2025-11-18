@@ -1,0 +1,263 @@
+/* Reset & Base */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2 {
+  font-weight: 600;
+  color: #b22222;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h2::after{
+  content: "★";
+  color: gold;
+  font-size: 1.2em;
+  margin-left: 5px;
+}
+
+/* Header */
+header {
+  background: #b22222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  /*filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));*/
+}
+header h1 {
+  font-size: 3rem;   
+  font-weight: bold;
+  color: white;
+}
+header p {
+  font-size: 1.5rem; /* Bigger role text */
+  font-weight: bold;
+}
+
+/* Navigation */
+nav {
+  background: #8b0000;
+  padding: 10px 20px;
+  position: relative;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: background 0.3s;
+}
+nav ul li a:hover {
+  background: #660000;
+  border-radius: 5px;
+}
+#menu-toggle {
+  display: none;
+}
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Layout */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+section, aside {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+section::before,
+aside::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0);
+  filter: blur(2px);
+  transition: all 0.3s ease;
+  z-index: 0;
+  pointer-events: none; 
+}
+
+section:hover::before,
+aside:hover::before {
+  background: rgba(0,0,0,0.1);
+}
+
+section:hover,
+aside:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Profile Photo */
+#profile img {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(20%) brightness(1.1);
+}
+#profile img:hover{
+  transform: scale(0.9) rotate(1deg);
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th, td {
+  border: 1px solid #b22222;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background: #b22222;
+  color: white;
+}
+
+/* Spotify card */
+.spotify-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  margin: auto;
+}
+input, textarea, button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+input:focus, textarea:focus {
+  border-color: #b22222;
+  outline: none;
+  box-shadow: 0 0 5px rgba(178, 34, 34, 0.4);
+}
+input:required {
+  border-left: 3px solid #e74c3c;
+}
+button {
+  background: #b22222;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #8b0000;
+}
+
+/* Details */
+details {
+  margin-top: 10px;
+}
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+details[open] summary {
+  color: #b22222;
+  transition: 0.3s;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center; 
+  gap: 25px;
+  align-items: center;
+  padding: 10px 0;
+}
+.social-links a {
+  color: #b22222;
+  font-size: 2.2rem; 
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+.social-links a:hover { 
+  color: #8b0000;
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #8b0000;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    border-radius: 5px;
+  }
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+@media print {
+  nav, footer {
+    display: none;
+  }
+  body {
+    font-size: 12pt;
+    color: black;
+  }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ia Mary Sorio - Profile Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <h1>Ia Mary Sorio</h1>
+      <p>BSIT - 3A | Working Student</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+    <input type="checkbox" id="menu-toggle">
+    <ul class="menu">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#quickinfo">Quick Info</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Profile Photo -->
+    <section id="profile" data-role="student">
+      <h2>Profile Photo</h2>
+      <picture>
+        <img src="C:\Users\Iyay.ms\OneDrive\Desktop\bDev\Lab 4\2a99aaa2-f8e9-45e9-8ef1-03b590598137.jpg" alt="Profile Picture">
+      </picture>
+    </section>
+
+    <!-- About Me -->
+    <section id="about">
+      <h2>About Me</h2>
+      <article data-interest="self-learning">
+        <p>A 3rd-year working student who likes to discover new things and learn everything in her own way.</p>
+      </article>
+    </section>
+
+    <!-- Quick Info -->
+    <section id="quickinfo">
+      <h2>Quick Info</h2>
+      <table>
+        <tr><th>Detail</th><th>Information</th></tr>
+        <tr><td>Role</td><td>Working Student</td></tr>
+        <tr><td>Date of Birth</td><td>June 27, 2004</td></tr>
+        <tr><td>Fun Fact</td><td>Always curious about learning new skills</td></tr>
+      </table>
+    </section>
+
+    <!-- Hobbies -->
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <table>
+        <tr><th>#</th><th>Hobby</th></tr>
+        <tr><td>1</td><td>Reading Books</td></tr>
+        <tr><td>2</td><td>Watching Series/Documentaries</td></tr>
+        <tr><td>3</td><td>Designing</td></tr>
+      </table>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <details>
+        <summary><b>Click to see more</b></summary>
+        <p>🏅 Consistent honor student<br>
+           📚 Successfully balancing studies & work<br>
+           🎓 Progressing towards BSIT degree<br>
+           ✨ More to come...</p>
+      </details>
+    </section>
+
+    <!-- Embedded Spotify Player -->
+    <aside>
+      <h2>Music</h2>
+      <div class="spotify-card">
+        <iframe src="https://open.spotify.com/embed/album/14JkAa6IiFaOh5s0nMyMU9"
+                width="100%" height="380" frameborder="0"
+                allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </aside>
+
+    <!-- Contact Info -->
+    <section id="contact">
+      <h2>Contact Info</h2>
+      <div class="contact-info">
+        <p><b>Email:</b> iamsorio@example.com</p>
+        <p><b>Mobile:</b> 09766771371</p>
+      </div>
+
+      <form>
+        <label>Your Email:</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Phone:</label>
+        <input type="tel" placeholder="09xx-xxx-xxxx" pattern="^09[0-9]{9}$" required>
+
+        <label>Date:</label>
+        <input type="date" required>
+
+        <label>Favorite Color:</label>
+        <input type="color" value="#b22222">
+
+        <label>Message:</label>
+        <textarea rows="4" placeholder="Write your message here"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- Social Links -->
+    <section id="connect">
+      <h2>Connect with Me</h2>
+      <div class="social-links">
+        <a href="https://www.facebook.com/iyay.ms/" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/iyay.ms/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ia Mary Sorio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
